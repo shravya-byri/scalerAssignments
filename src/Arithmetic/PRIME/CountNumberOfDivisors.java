@@ -12,19 +12,19 @@ public class CountNumberOfDivisors {
     public static ArrayList<Integer> solve(ArrayList<Integer> A) {
         ArrayList<Integer> primeFactor = new ArrayList<>();
         ArrayList<Integer> res = new ArrayList<>();
-        for(int i = 0; i <= 1000; i++) {
+        for(int i = 0; i <= 100; i++) {
             primeFactor.add(0);
         }
-        for(int i = 2; i <= 1000; i++) {
+        for(int i = 2; i <= 100; i++) {
               if(primeFactor.get(i) == 0) {
-                  for(int j = i; j <= 1000; j = j+i ) {
+                  for(int j = i; j <= 100; j = j+i ) {
                       if(primeFactor.get(j) == 0){
                           primeFactor.set(j,i);
                       }
                   }
               }
         }
-
+       System.out.println(primeFactor);
         for ( int i = 0; i < A.size(); i++) {
             int ans = 1;
             int p,e,n;

@@ -28,7 +28,7 @@ public class FactorialArray {
         Collections.sort(A);
         //System.out.println(A);
         int j;
-        int lastIndex = A.size()-1;
+        //int lastIndex = A.size()-1;
         for(int i = 0; i < A.size(); i++) {
             j = A.get(i);
             while(j > 1) {
