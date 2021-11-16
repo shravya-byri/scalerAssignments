@@ -1,4 +1,4 @@
-package Arithmetic;
+package Arithmetic.PRIME;
 
 public class DoorOpenClose {
     public static void main(String[] args) {

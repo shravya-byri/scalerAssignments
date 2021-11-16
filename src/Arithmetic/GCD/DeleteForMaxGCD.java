@@ -1,4 +1,4 @@
-package Arithmetic;
+package Arithmetic.GCD;
 
 import java.util.ArrayList;
 import java.util.List;

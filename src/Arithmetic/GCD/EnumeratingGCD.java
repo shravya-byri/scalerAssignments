@@ -1,4 +1,4 @@
-package Arithmetic;
+package Arithmetic.GCD;
 
 public class EnumeratingGCD {
     public static void main(String[] args) {

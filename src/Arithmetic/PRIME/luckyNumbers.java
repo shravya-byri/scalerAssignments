@@ -1,4 +1,4 @@
-package Arithmetic;
+package Arithmetic.PRIME;
 
 import java.sql.Array;
 import java.util.*;

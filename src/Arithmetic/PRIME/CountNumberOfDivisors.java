@@ -1,4 +1,4 @@
-package Arithmetic;
+package Arithmetic.PRIME;
 
 import java.util.ArrayList;
 import java.util.Collections;
