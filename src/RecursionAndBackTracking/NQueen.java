@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class NQueen {
     public static void main(String[] args) {
-        int A =4;
+        int A = 5;
         System.out.println(solve(A));
     }
     public static boolean solve(int A) {
@@ -20,7 +20,7 @@ public class NQueen {
         for(int c = 0; c < A; c++) {
             if(isValid(row,c,column,A)) {
                 column.set(row,c);
-                if(nQueen(row+1,column,A)) return true;
+                nQueen(row+1,column,A);
                 column.set(row,-1);
             }
         }
@@ -28,11 +28,11 @@ public class NQueen {
 
     }
     public static boolean isValid(int row,int c, ArrayList<Integer> column, int A){
-        for(int i = 0; i < A; i++) {
+        for(int i = 0; i < row; i++) {
             if(column.get(row) == c) return false;
+            if((row + c) == (i + column.get(i)) || (row - i) ==(c - column.get(i))) return false;
 
         }
-
         return true;
     }
 }
