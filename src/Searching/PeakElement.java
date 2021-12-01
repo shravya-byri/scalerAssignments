@@ -9,7 +9,6 @@ public class PeakElement {
         System.out.println(solve(A));
     }
     public static int solve(ArrayList<Integer> A) {
-
         int l = 0; int r = A.size()-1;
         while(l < r) {
             int mid = l + ((r - l)/2);

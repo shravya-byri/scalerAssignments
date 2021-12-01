@@ -1,6 +1,6 @@
 package Searching;
 
-public class SqareRootOfNumber {
+public class SquareRootOfNumber {
     public static void main(String[] args) {
         System.out.println(sqrt(2147483647));
 
