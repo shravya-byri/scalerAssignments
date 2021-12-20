@@ -18,7 +18,6 @@ public class MergeSort {
         }
     }
     public static ArrayList<Integer> merge(ArrayList<Integer> A,int l, int mid, int r) {
-
         ArrayList<Integer> ans = new ArrayList<>();
         for(int i = 0; i < A.size(); i++) {
             ans.add(0);
@@ -51,7 +50,6 @@ public class MergeSort {
         for(int m = l; m <= r; m++) {
             ans.set(m,B[m]);
         }
-        System.out.println(ans);
         return ans;
     }
 }
