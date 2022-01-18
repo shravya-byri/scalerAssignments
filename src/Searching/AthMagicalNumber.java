@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class AthMagicalNumber {
     public static void main(String[] args) {
-        System.out.println(solve(11,12,13));
+        System.out.println(solve(5,2,3));
     }
     public static int solve(int A, int B, int C) {
          long l = Math.min(B,C);
@@ -14,7 +14,7 @@ public class AthMagicalNumber {
              mid = l + ((r - l)/2);
              //ans = (int)mid;
              if(A <= NoOfMultiplesunderN(mid,B,C)) {
-                 ans = (int)mid;
+                  ans = (int)mid;
                  r = mid -1;
              } else l = mid + 1;
          }

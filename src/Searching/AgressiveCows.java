@@ -1,6 +1,7 @@
 package Searching;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class AgressiveCows {
@@ -9,10 +10,11 @@ public class AgressiveCows {
         System.out.println(solve(A,4));
     }
     public static int solve(ArrayList<Integer> A, int B) {
-        int low = 1;
-        int high = A.get(A.size()-1) - A.get(0);
-        int mid;
-        int ans = 0;
+        Collections.sort(A);
+        long low = 1;
+        long high = A.get(A.size()-1) - A.get(0);
+        long mid;
+        long ans = 0;
         while(low <= high) {
             mid = low + (high - low)/2;
             if(check(A, B, mid)) {
@@ -20,19 +22,20 @@ public class AgressiveCows {
                 low = mid + 1;
             } else high = mid - 1;
         }
-        return ans;
+        return (int)ans;
 
     }
-    public static boolean check(ArrayList<Integer>A, int B, int mid) {
+    public static boolean check(ArrayList<Integer>A, int B, long mid) {
         int recentPlace = A.get(0);
         int cowsPlaced = 1;
         for(int i = 1; i < A.size(); i++) {
             if (A.get(i) - recentPlace >= mid) {
                 recentPlace = A.get(i);
                 cowsPlaced++;
+                if(cowsPlaced == B) return true;
             }
         }
-            if(cowsPlaced >= B) return true;
-            else return false;
+
+        return false;
     }
 }
