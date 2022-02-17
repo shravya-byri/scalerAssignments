@@ -23,7 +23,7 @@ public class LevelOrder {
             A.left.right = new TreeNode(8);
             A.right.left = new TreeNode(9);
             A.right.right = new TreeNode(0);
-            ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
+
             System.out.println(solve(A));
         }
         public static ArrayList<ArrayList<Integer>> solve(TreeNode A) {
