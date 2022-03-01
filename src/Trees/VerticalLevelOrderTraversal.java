@@ -37,6 +37,12 @@ public class VerticalLevelOrderTraversal {
             max = Math.max(max,level);
             ArrayList<Integer> tempList = hm.getOrDefault(level, new ArrayList<>()); // it returns the value for the key if exists
             // else returns new value which is provided.
+            // if(hm.containsKey(level))
+            //                 tempList = hm.get(level);
+            //            else
+            //                tempList = new ArrayList<>();
+            //
+            //            tempList.add(entry.node.val);
             tempList.add(curr.val);
             hm.put(level,tempList);
             if(curr.left != null) {
