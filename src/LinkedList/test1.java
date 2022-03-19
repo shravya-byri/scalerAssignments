@@ -6,7 +6,7 @@ public class test1 {
     }
 
     public static int nextPerfectSquare(int N) {
-        if(checkPerfectSquare(N) == true) return N;
+        if(checkPerfectSquare(N)) return N;
         int nextN = (int) Math.floor(Math.sqrt(N)) + 1;
 
         return nextN * nextN;
